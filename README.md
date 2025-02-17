@@ -67,9 +67,9 @@ Three possible **state representations**:
 The agent uses **Q-learning**, a reinforcement learning algorithm that updates a **Q-table** to estimate the best action for each state.  
 
 **Q-value update rule**:  
-\[
+$
 Q(s, a) \leftarrow Q(s, a) + \alpha \left( r + \gamma \max Q(s', a') - Q(s, a) \right)
-\]
+$
 where:  
 - **s** = Current state  
 - **a** = Action taken  
@@ -80,10 +80,9 @@ where:
 
 ### 🔄 Exploration vs. Exploitation  
 - Starts with **high exploration (ε = 1.0)**.  
-- Gradually **decays exploration** using an exponential decay function:  
-\[
-\epsilon = \epsilon_{min} + (\epsilon_{max} - \epsilon_{min}) \times e^{-\text{decay rate} \times \text{episode}}
-\]
+- Gradually **decays exploration** using an exponential decay function:
+
+$ \epsilon = \epsilon_{min} + (\epsilon_{max} - \epsilon_{min}) \times e^{-\text{decay rate} \times \text{episode}} $
 
 ---
 
