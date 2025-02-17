@@ -81,7 +81,7 @@ where:
 - Gradually **decays exploration** using an exponential decay function:
 
 $$
-\epsilon = \epsilon_{min} + (\epsilon_{max} - \epsilon_{min}) \times e^{-\text{decay rate} \times \text{episode}}
+ε = ε_{min} + (ε_{max} - ε_{min}) × e^{-	ext{decay rate} × 	ext{episode}}
 $$
 
 
@@ -106,24 +106,18 @@ plt.show()
 
 ---
 
-## 🎮 Testing the Agent  
-After training, the agent can navigate the environment in **real-time visualization**:  
-```python
-state = env.reset()
-done = False
-total_reward = 0
-env.render(delay=1)
+## 🤖 SARSA Agent  
 
-while not done:
-    action = agent.choose_action(state)
-    next_state, reward, done, _ = env.step(action)
-    agent.update_q_table(state, action, reward, next_state)
-    state = next_state
-    total_reward += reward
-    env.render(delay=1)
+SARSA (State-Action-Reward-State-Action) is another reinforcement learning algorithm that follows an **on-policy** strategy. Unlike Q-learning, SARSA updates its Q-values using the next action that was actually chosen by the agent, rather than assuming the best possible action. The update rule is:
 
-print("Final Reward:", total_reward)
-```
+$$ Q(s, a) = Q(s, a) + α * (r + γ * Q(s', a') - Q(s, a)) $$
+
+where:
+- **a'** is the action actually taken in the next state.
+- This makes SARSA more conservative than Q-learning in some cases.
+
+## 🎲 Random Walk Strategy  
+A baseline **random strategy** is implemented where the agent takes completely random actions without learning. This is useful for comparing against **reinforcement learning approaches** to measure their efficiency and improvements over time.
 
 ---
 
@@ -144,9 +138,9 @@ Install dependencies:
 ```bash
 pip install -r requirements.txt
 ```
-Run the  script:  
+Run the script:  
 ```bash
-python RL_игра.ipynb
+python RL_игра-3.ipynb
 ```
 ---
 
@@ -154,7 +148,7 @@ python RL_игра.ipynb
 - **Python**  
 - **OpenAI Gym (for custom environment)**  
 - **NumPy & Matplotlib (for analysis & visualization)**  
-- **Q-learning (Reinforcement Learning)**  
+- **Q-learning & SARSA (Reinforcement Learning)**  
 
 ---
 
