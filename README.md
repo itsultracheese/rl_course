@@ -5,8 +5,7 @@ This project implements a **reinforcement learning agent** to navigate a simulat
 
 ## 🎯 Goal  
 Train an autonomous agent to:  
-✅ Find a free parking spot as quickly as possible.  
-🚫 Avoid obstacles and occupied parking spots.  
+✅ Find a free parking spot as quickly as possible.   
 ⚡ Learn an **optimal policy** through reinforcement learning.  
 
 ---
@@ -16,8 +15,7 @@ Train an autonomous agent to:
 ### 📍 Grid World Representation  
 The parking lot is a **grid-based world**, where each cell represents:  
 - 🟩 **Empty Space** – The agent can move through it freely.  
-- 🅿️ **Parking Spot** – Can be either **available (1)** or **occupied (2)**.  
-- ⬛ **Wall** – An impassable obstacle.  
+- 🅿️ **Parking Spot** – Can be either **available (1)** or **occupied (2)**.   
 - 🚗 **Agent** – The car's current location.  
 
 ### 📏 Grid Size  
@@ -60,14 +58,8 @@ Three possible **state representations**:
 | ✅ Successfully parking in an **available spot** | **+100** |
 | ➡️ Each move | **-1** (encourages efficiency) |
 | 🚫 Trying to park in an **occupied spot** | **-50** |
-| ⛔ Hitting a **wall** or **illegal move** | **-5** |
 | ❌ Max steps reached without parking | **-10** |
 
-### ⚠️ **Bug Fixes & Improvements**  
-✔️ **Fixed coordinate-based state representation**.  
-✔️ **Fixed agent getting stuck** – Increased **reward for successful parking** (`+100`), and **penalty for occupied spots** (`-50`).  
-
----
 
 ## 🚀 Q-Learning Agent  
 
@@ -154,15 +146,10 @@ Install dependencies:
 ```bash
 pip install -r requirements.txt
 ```
-Run the training script:  
+Run the  script:  
 ```bash
-python train.py
+python RL_игра.ipynb
 ```
-Run the simulation:  
-```bash
-python test.py
-```
-
 ---
 
 ## 🛠 Tech Stack  
