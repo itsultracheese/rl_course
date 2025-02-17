@@ -66,10 +66,9 @@ Three possible **state representations**:
 ### 📖 Learning Process  
 The agent uses **Q-learning**, a reinforcement learning algorithm that updates a **Q-table** to estimate the best action for each state.  
 
-**Q-value update rule**:  
-$
-Q(s, a) \leftarrow Q(s, a) + \alpha \left( r + \gamma \max Q(s', a') - Q(s, a) \right)
-$
+
+![Q-Learning Update Rule](https://latex.codecogs.com/png.latex?Q(s,a)%20=%20Q(s,a)%20+%20%5Calpha%20%5Cleft(r%20+%20%5Cgamma%20%5Cmax%20Q(s',a')%20-%20Q(s,a)%5Cright))
+
 where:  
 - **s** = Current state  
 - **a** = Action taken  
