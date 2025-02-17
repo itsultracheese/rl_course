@@ -1,7 +1,6 @@
 numpy
 matplotlib
 gym
-time
 pygame
 seaborn
-
+gymnasium
