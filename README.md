@@ -122,9 +122,18 @@ A baseline **random strategy** is implemented where the agent takes completely r
 ---
 
 ## 📊 Performance & Visualization  
-A reinforcement learning training curve is attached to visualize agent improvements.  
 
-📷 _Attach your training graph image here_  
+### Random walk agent
+
+![random_walk_demonstration](./random_walk.gif)
+
+### SARSA
+
+![sarsa_demonstration](./sarsa.gif)
+
+### Q-Learning
+
+![q-learning_demonstration](./q_learning.gif)
 
 ---
 
