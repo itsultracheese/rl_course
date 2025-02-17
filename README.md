@@ -81,9 +81,10 @@ where:
 - Starts with **high exploration (ε = 1.0)**.  
 - Gradually **decays exploration** using an exponential decay function:
 
-$ \epsilon = \epsilon_{min} + (\epsilon_{max} - \epsilon_{min}) \times e^{-\text{decay rate} \times \text{episode}} $
+$$
+\epsilon = \epsilon_{min} + (\epsilon_{max} - \epsilon_{min}) \times e^{-\text{decay rate} \times \text{episode}}
+$$
 
----
 
 ## 📊 Training the Agent  
 To train the agent, run:  
